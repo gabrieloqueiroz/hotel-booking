@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9dr9cxRCd4LLvKBxjKUPPxvU2MQFgRDLbg1JjRI14Q5fWLjakUDzgfJVPaU9w7z4b3cu/XOrW9HI41/fzxMfEQ==",
+  "dgSpecHash": "mXr3VYKJyiU4p/7tpILONhZSV6v3+5yvULpzW5DLGpj1DF5wlgoq9fEBO2Hm7CA/bE99LvdVPEEPVlv85nT2JQ==",
   "success": true,
   "projectFilePath": "D:\\estudos\\.Net\\HotelBooking\\BookingService\\Tests\\Domain\\DomainTests\\DomainTests.csproj",
   "expectedPackageFiles": [

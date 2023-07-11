@@ -16,6 +16,11 @@ public class Booking
     private EStatus Status { get; set; }
     public EStatus CurrentStatus { get { return this.Status; } }
 
+    public Booking() 
+    {
+        this.Status = EStatus.Created;
+    }
+
     public void ChangeState(EAction action)
     {
         this.Status = (this.Status, action) switch
