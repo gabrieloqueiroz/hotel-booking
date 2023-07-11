@@ -10,3 +10,8 @@ D:\estudos\.Net\HotelBooking\BookingService\Adapters\Data\obj\Debug\net6.0\Data.
 D:\estudos\.Net\HotelBooking\BookingService\Adapters\Data\obj\Debug\net6.0\refint\Data.dll
 D:\estudos\.Net\HotelBooking\BookingService\Adapters\Data\obj\Debug\net6.0\Data.pdb
 D:\estudos\.Net\HotelBooking\BookingService\Adapters\Data\obj\Debug\net6.0\ref\Data.dll
+D:\estudos\.Net\HotelBooking\BookingService\Adapters\Data\bin\Debug\net6.0\Data.runtimeconfig.json
+D:\estudos\.Net\HotelBooking\BookingService\Adapters\Data\bin\Debug\net6.0\Domain.dll
+D:\estudos\.Net\HotelBooking\BookingService\Adapters\Data\bin\Debug\net6.0\Domain.pdb
+D:\estudos\.Net\HotelBooking\BookingService\Adapters\Data\obj\Debug\net6.0\Data.csproj.CopyComplete
+D:\estudos\.Net\HotelBooking\BookingService\Adapters\Data\obj\Debug\net6.0\Data.genruntimeconfig.cache
