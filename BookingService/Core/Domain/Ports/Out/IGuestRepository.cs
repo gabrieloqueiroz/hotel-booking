@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Ports;
+namespace Domain.Ports.Out;
 
 public interface IGuestRepository
 {

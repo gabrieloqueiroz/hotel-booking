@@ -1,4 +1,4 @@
-﻿using Domain.Ports;
+﻿using Domain.Ports.Out;
 
 namespace Data.Guest;
 

@@ -1,8 +1,8 @@
 ﻿using Application.Guest.DTOs;
-using Application.Guest.Ports;
+using Application.Guest.Ports.In;
 using Application.Guest.Request;
 using Application.Guest.Responses;
-using Domain.Ports;
+using Domain.Ports.Out;
 
 namespace Application;
 
@@ -34,7 +34,7 @@ public class GuestManager : IGuestManager
             return new GuestResponse
             {
                 Success = false,
-                ErrorCode = ErrorCodes.COULD_NOT_STORE_DATA,
+                ErrorCode = EErrorCodes.COULD_NOT_STORE_DATA,
                 Message = "There was an error when saving to DB"
             };
         }

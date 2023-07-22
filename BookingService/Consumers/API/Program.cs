@@ -1,30 +1,20 @@
-using Data;
-using Microsoft.EntityFrameworkCore;
+using API.Configuration;
+
+string baseUrl = "hotel-booking";
+string serviceName = "HotelBooking";
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
-
-# region DB wiring up
-var connectionString = builder.Configuration.GetConnectionString("Main");
-builder.Services.AddDbContext<HotelDbContext>(
-    options => options.UseSqlServer(connectionString));
-# endregion
-
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.RegisterDependencies(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerConfiguration();
+
 
 var app = builder.Build();
+if (app.Environment.IsDevelopment()) app.UseDeveloperExceptionPage();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwaggerConfiguration(builder.Environment, baseUrl, serviceName);
 
 app.UseHttpsRedirection();
 
