@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "SU+3AwGNZgooe9IV7N5NC4x8ND8pNdwFd6PXUIgsjg4DUXbF3zPASwIPjpvDnGAp7yh6Vy1O7mS9NAxXuUW5tw==",
+  "dgSpecHash": "vjt3NCEPQIouwFIUw6YBiKj4OWVHCVTHw8eCVJ6jB4D8FAsGG40ZjVuYQSEwS1YNgXL5sFeK+uobBtGWenhFig==",
   "success": true,
   "projectFilePath": "D:\\estudos\\.Net\\HotelBooking\\BookingService\\Tests\\Application\\ApplicationTests\\ApplicationTests.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\microsoft.codecoverage\\17.3.2\\microsoft.codecoverage.17.3.2.nupkg.sha512",
     "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
@@ -12,6 +13,7 @@
     "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
     "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.3.2\\microsoft.testplatform.objectmodel.17.3.2.nupkg.sha512",
     "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\microsoft.testplatform.testhost\\17.3.2\\microsoft.testplatform.testhost.17.3.2.nupkg.sha512",
+    "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\moq\\4.18.4\\moq.4.18.4.nupkg.sha512",
     "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
     "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\nuget.frameworks\\5.11.0\\nuget.frameworks.5.11.0.nupkg.sha512",
@@ -20,6 +22,7 @@
     "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\nunit3testadapter\\4.2.1\\nunit3testadapter.4.2.1.nupkg.sha512",
     "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\system.collections\\4.0.11\\system.collections.4.0.11.nupkg.sha512",
     "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\system.diagnostics.debug\\4.0.11\\system.diagnostics.debug.4.0.11.nupkg.sha512",
+    "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512",
     "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\system.diagnostics.tools\\4.0.1\\system.diagnostics.tools.4.0.1.nupkg.sha512",
     "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\system.dynamic.runtime\\4.0.11\\system.dynamic.runtime.4.0.11.nupkg.sha512",
     "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\system.globalization\\4.0.11\\system.globalization.4.0.11.nupkg.sha512",

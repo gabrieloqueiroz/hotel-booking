@@ -2,6 +2,7 @@
 using Application.Guest.Ports.In;
 using Application.Guest.Request;
 using Application.Guest.Responses;
+using Domain.Exceptions;
 using Domain.Ports.Out;
 
 namespace Application;
@@ -21,12 +22,32 @@ public class GuestManager : IGuestManager
         {
             var guest = GuestDTO.mapToEntity(request.Data);
 
-            request.Data.Id = await _guestRepository.Create(guest);
+            await guest.save(_guestRepository);
+
+            request.Data.Id = guest.Id;
 
             return new GuestResponse
             {
                 Data = request.Data,
                 Success = true
+            };
+        }
+        catch (InvalidPersonDocumentIdException)
+        {
+            return new GuestResponse
+            {
+                Success = false,
+                ErrorCode = EErrorCodes.INVALID_ID_PERSON,
+                Message = "The Id passed is not valid"
+            };
+        }
+        catch (MissingRequiredInformation)
+        {
+            return new GuestResponse
+            {
+                Success = false,
+                ErrorCode = EErrorCodes.MISSING_REQUIRED_INFO,
+                Message = "Missing Required information passed"
             };
         }
         catch (Exception)

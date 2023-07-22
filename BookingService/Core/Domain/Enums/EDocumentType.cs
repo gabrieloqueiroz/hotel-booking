@@ -8,6 +8,6 @@ namespace Domain.Enums;
 
 public enum EDocumentType
 {
-    Passport = 0,
-    Driverlicence = 1
+    Passport = 1,
+    Driverlicence = 2
 }

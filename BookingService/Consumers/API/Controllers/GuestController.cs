@@ -33,7 +33,7 @@ public class GuestController : ControllerBase
 
         if (res.Success) return Created(" ", res.Data);
 
-        if (res.ErrorCode == EErrorCodes.NOT_FOUND) return BadRequest(res);
+        if (res.isMappedException()) return BadRequest(res);
 
         _logger.RecLog(nameof(create), $"Response with unknown ErrorCode retuned - {res}", ELogType.LogInformation);
 
