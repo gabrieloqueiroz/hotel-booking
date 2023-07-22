@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace Data;
+namespace Data.Room;
 
 public class RoomConfiguration : IEntityTypeConfiguration<Entities.Room>
 {
