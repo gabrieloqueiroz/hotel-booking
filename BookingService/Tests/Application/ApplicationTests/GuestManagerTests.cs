@@ -1,7 +1,7 @@
 using Application;
+using Application.Guest;
 using Application.Guest.DTOs;
 using Application.Guest.Request;
-using Application.Guest.Responses;
 using Domain.Entities;
 using Domain.Ports.Out;
 using Moq;
