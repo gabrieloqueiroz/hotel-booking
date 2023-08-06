@@ -60,4 +60,25 @@ public class GuestManager : IGuestManager
             };
         }
     }
+
+    public async Task<GuestResponse> get(int guestId)
+    {
+       var guest = await _guestRepository.Get(guestId);
+
+        if(guest == null)
+        {
+            return new GuestResponse
+            {
+                Success = false,
+                ErrorCode = EErrorCodes.GUEST_NOT_FOUND,
+                Message = $"The Id {guestId} not found"
+            };
+        }
+
+        return new GuestResponse
+        {
+            Data = GuestDTO.mapToDto(guest),
+            Success = true
+        };
+    }
 }

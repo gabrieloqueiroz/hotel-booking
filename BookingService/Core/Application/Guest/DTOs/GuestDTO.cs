@@ -27,4 +27,15 @@ public class GuestDTO
             }
         };
     }
+    
+    public static GuestDTO mapToDto(Entities.Guest guest)
+    {
+        return new GuestDTO
+        {
+            Id = guest.Id,
+            Name = guest.Name,
+            Surname = guest.Surname,
+            Email = guest.Email,
+        };
+    }
 }

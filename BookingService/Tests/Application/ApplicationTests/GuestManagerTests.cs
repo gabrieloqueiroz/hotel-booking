@@ -83,7 +83,6 @@ namespace ApplicationTests
         public async Task should_invalidate_request_to_documentId(string doc)
         {
             // Given
-
             var guestDTO = new GuestDTO
             {
                 Name = "Test",
@@ -122,7 +121,6 @@ namespace ApplicationTests
         public async Task should_invalidate_request_to_documentId(string name, string surname, string email)
         {
             // Given
-
             var guestDTO = new GuestDTO
             {
                 Name = name,
@@ -149,6 +147,57 @@ namespace ApplicationTests
             Assert.False(response.Success);
             Assert.AreEqual(EErrorCodes.MISSING_REQUIRED_INFO, response.ErrorCode);
             Assert.AreEqual("Missing Required information passed", response.Message);
+        }
+
+        [Test]
+        public async Task should_return_guestNoFound_when_gues_does_not_exist()
+        {
+            //Given
+            var guestRequest = new Guest
+            {
+                Id = 333,
+                Name = "Test",
+            };
+
+            guestRepository.Setup(x => x.Get(It.IsAny<int>()))
+                .Returns(Task.FromResult<Guest>(null));
+
+            //When
+            var response = await _guestManager.get(guestRequest.Id);
+
+            //Then
+            Assert.IsNotNull(response);
+            Assert.False(response.Success);
+            Assert.AreEqual(EErrorCodes.GUEST_NOT_FOUND, response.ErrorCode);
+            Assert.AreEqual($"The Id {guestRequest.Id} not found", response.Message);
+        }
+
+        [Test]
+        public async Task should_return_guest_with_success()
+        {
+            //Given
+            var guest = new Guest
+            {
+                Id = 333,
+                Name = "Test",
+                DocumentId = new Domain.ValueObjects.PersonId
+                {
+                    DocumentType = Domain.Enums.EDocumentType.Driverlicence,
+                    IdNumber = "123"
+                }
+            };
+
+            guestRepository.Setup(x => x.Get(It.IsAny<int>()))
+                .Returns(Task.FromResult((Guest?)guest));
+
+            //When
+            var response = await _guestManager.get(guest.Id);
+
+            //Then
+            Assert.IsNotNull(response);
+            Assert.IsTrue(response.Success);
+            Assert.AreEqual(guest.Id, response.Data.Id);
+            Assert.AreEqual(guest.Name, response.Data.Name);
         }
     }
 }

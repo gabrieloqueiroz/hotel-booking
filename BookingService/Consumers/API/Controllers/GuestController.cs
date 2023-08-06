@@ -39,4 +39,14 @@ public class GuestController : ControllerBase
 
         return BadRequest(500);
     }
+
+    [HttpGet]
+    public async Task<ActionResult<GuestDTO>> get(int guestId)
+    {
+        var guestResponse = await _guestManager.get(guestId);
+
+        if (!guestResponse.Success) return NotFound(guestResponse);
+
+        return Ok(guestResponse.Data);
+    }
 }
