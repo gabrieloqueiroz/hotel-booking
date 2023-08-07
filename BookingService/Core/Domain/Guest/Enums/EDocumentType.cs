@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Enums;
+namespace Domain.Guest.Enums;
 
-public enum EAcceptedCurrencies
+public enum EDocumentType
 {
-    Dollar = 0,
-    Euro = 1,
-    Bitcoin = 2
+    Passport = 1,
+    Driverlicence = 2
 }

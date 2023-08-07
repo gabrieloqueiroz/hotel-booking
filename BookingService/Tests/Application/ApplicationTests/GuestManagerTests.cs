@@ -2,8 +2,9 @@ using Application;
 using Application.Guest;
 using Application.Guest.DTOs;
 using Application.Guest.Request;
-using Domain.Entities;
-using Domain.Ports.Out;
+using Domain.Guest.Entities;
+using Domain.Guest.Enums;
+using Domain.Guest.Ports.Out;
 using Moq;
 using NUnit.Framework;
 using System;
@@ -61,7 +62,7 @@ namespace ApplicationTests
             };
                         
 
-            guestRepository.Setup(x => x.Create(It.IsAny<Guest>()))
+            guestRepository.Setup(x => x.Create(It.IsAny<GuestEntity>()))
                 .Returns(Task.FromResult(expectedId)); // Nesse modo usamos a lib Moq para criar o Mock desse classe
 
             
@@ -97,7 +98,7 @@ namespace ApplicationTests
             };
 
 
-            guestRepository.Setup(x => x.Create(It.IsAny<Guest>()))
+            guestRepository.Setup(x => x.Create(It.IsAny<GuestEntity>()))
                 .Returns(Task.FromResult(111));
 
 
@@ -135,7 +136,7 @@ namespace ApplicationTests
             };
 
 
-            guestRepository.Setup(x => x.Create(It.IsAny<Guest>()))
+            guestRepository.Setup(x => x.Create(It.IsAny<GuestEntity>()))
                 .Returns(Task.FromResult(111));
 
 
@@ -153,14 +154,14 @@ namespace ApplicationTests
         public async Task should_return_guestNoFound_when_gues_does_not_exist()
         {
             //Given
-            var guestRequest = new Guest
+            var guestRequest = new GuestEntity
             {
                 Id = 333,
                 Name = "Test",
             };
 
             guestRepository.Setup(x => x.Get(It.IsAny<int>()))
-                .Returns(Task.FromResult<Guest>(null));
+                .Returns(Task.FromResult<GuestEntity>(null));
 
             //When
             var response = await _guestManager.get(guestRequest.Id);
@@ -176,19 +177,19 @@ namespace ApplicationTests
         public async Task should_return_guest_with_success()
         {
             //Given
-            var guest = new Guest
+            var guest = new GuestEntity
             {
                 Id = 333,
                 Name = "Test",
                 DocumentId = new Domain.ValueObjects.PersonId
                 {
-                    DocumentType = Domain.Enums.EDocumentType.Driverlicence,
+                    DocumentType = EDocumentType.Driverlicence,
                     IdNumber = "123"
                 }
             };
 
             guestRepository.Setup(x => x.Get(It.IsAny<int>()))
-                .Returns(Task.FromResult((Guest?)guest));
+                .Returns(Task.FromResult((GuestEntity?)guest));
 
             //When
             var response = await _guestManager.get(guest.Id);

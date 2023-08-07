@@ -1,18 +1,13 @@
-﻿using Domain.Exceptions;
-using Domain.Ports.Out;
-using Domain.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Domain.Guest.Exceptions;
+using Domain.Guest.Ports.Out;
+using Domain.Guest.ValueObjects;
 
-namespace Domain.Entities;
+namespace Domain.Guest.Entities;
 
-public class Guest
+public class GuestEntity
 {
     public int Id { get; set; }
-    public string Name{ get; set; }
+    public string Name { get; set; }
     public string Surname { get; set; }
     public string Email { get; set; }
     public PersonId DocumentId { get; set; }
@@ -34,15 +29,15 @@ public class Guest
             string.IsNullOrEmpty(Email),
             "Requireds fields not be empty"
             );
-    } 
+    }
 
     public async Task save(IGuestRepository guestRepository)
     {
-        this.validateState();
+        validateState();
 
-        if(this.Id == 0)
+        if (Id == 0)
         {
-            this.Id = await guestRepository.Create(this);
+            Id = await guestRepository.Create(this);
         }
         else
         {

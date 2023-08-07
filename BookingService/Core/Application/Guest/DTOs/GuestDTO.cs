@@ -1,5 +1,5 @@
-﻿using Entities = Domain.Entities;
-using Domain.Enums;
+﻿using Domain.Guest.Entities;
+using Domain.Guest.Enums;
 
 namespace Application.Guest.DTOs;
 
@@ -12,23 +12,23 @@ public class GuestDTO
     public string IdNumber { get; set; }
     public int IdTypeCode { get; set; }
 
-    public static Entities.Guest mapToEntity(GuestDTO guestDto)
+    public static GuestEntity mapToEntity(GuestDTO guestDto)
     {
-        return new Entities.Guest
+        return new GuestEntity
         {
             Id = guestDto.Id,
             Name = guestDto.Name,
             Surname = guestDto.Surname,
             Email = guestDto.Email,
-            DocumentId = new Domain.ValueObjects.PersonId
+            DocumentId = new Domain.Guest.ValueObjects.PersonId
             {
                 DocumentType = EDocumentType.Driverlicence,
                 IdNumber = guestDto.IdNumber,
             }
         };
     }
-    
-    public static GuestDTO mapToDto(Entities.Guest guest)
+
+    public static GuestDTO mapToDto(GuestEntity guest)
     {
         return new GuestDTO
         {

@@ -1,17 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Entities = Domain.Entities;
+﻿using Domain.Guest.Entities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Data.Guest;
 
-public class GuestConfiguration : IEntityTypeConfiguration<Entities.Guest>
+public class GuestConfiguration : IEntityTypeConfiguration<GuestEntity>
 {
-    public void Configure(EntityTypeBuilder<Entities.Guest> builder)
+    public void Configure(EntityTypeBuilder<GuestEntity> builder)
     {
         builder.HasKey(x => x.Id);
         builder.OwnsOne(x => x.DocumentId)

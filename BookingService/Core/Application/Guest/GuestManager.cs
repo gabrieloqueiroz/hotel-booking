@@ -2,8 +2,8 @@
 using Application.Guest.Ports.In;
 using Application.Guest.Request;
 using Application.Guest.Responses;
-using Domain.Exceptions;
-using Domain.Ports.Out;
+using Domain.Guest.Exceptions;
+using Domain.Guest.Ports.Out;
 
 namespace Application.Guest;
 
