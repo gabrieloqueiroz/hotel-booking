@@ -31,6 +31,11 @@ public class GuestEntity
             );
     }
 
+    public void isValid()
+    {
+        validateState();
+    }
+
     public async Task save(IGuestRepository guestRepository)
     {
         validateState();

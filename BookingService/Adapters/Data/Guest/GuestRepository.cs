@@ -20,7 +20,7 @@ public class GuestRepository : IGuestRepository
         return guest.Id;
     }
 
-    public Task<Domain.Guest.Entities.GuestEntity?> Get(int guestId)
+    public Task<Domain.Guest.Entities.GuestEntity?> get(int guestId)
     {
         return _hotelDbContext.Guests.Where(guest => guest.Id.Equals(guestId)).FirstOrDefaultAsync();
     }

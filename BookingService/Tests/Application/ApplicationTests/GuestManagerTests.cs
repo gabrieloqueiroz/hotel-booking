@@ -160,7 +160,7 @@ namespace ApplicationTests
                 Name = "Test",
             };
 
-            guestRepository.Setup(x => x.Get(It.IsAny<int>()))
+            guestRepository.Setup(x => x.get(It.IsAny<int>()))
                 .Returns(Task.FromResult<GuestEntity>(null));
 
             //When
@@ -181,14 +181,14 @@ namespace ApplicationTests
             {
                 Id = 333,
                 Name = "Test",
-                DocumentId = new Domain.ValueObjects.PersonId
+                DocumentId = new Domain.Guest.ValueObjects.PersonId
                 {
                     DocumentType = EDocumentType.Driverlicence,
                     IdNumber = "123"
                 }
             };
 
-            guestRepository.Setup(x => x.Get(It.IsAny<int>()))
+            guestRepository.Setup(x => x.get(It.IsAny<int>()))
                 .Returns(Task.FromResult((GuestEntity?)guest));
 
             //When

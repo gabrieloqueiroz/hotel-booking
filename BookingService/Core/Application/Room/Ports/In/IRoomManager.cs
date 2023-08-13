@@ -6,5 +6,5 @@ namespace Application.Room.Ports.In;
 public interface IRoomManager
 {
     Task<RoomResponse> Create(RoomRequest request);
-    Task<RoomResponse> Get(int id);
+    Task<RoomResponse> get(int id);
 }

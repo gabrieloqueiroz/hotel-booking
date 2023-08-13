@@ -1,11 +1,7 @@
-﻿using Domain.Entities;
-using Domain.Guest.Enums;
+﻿using Domain.Guest.Enums;
+using Domain.Booking;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Domain.Booking.Entities;
 
 namespace DomainTests.Entities;
 
@@ -21,7 +17,7 @@ public class BookingTest
     public void ShouldAlwaysStartWithCreatedStatus()
     {
         // Given - When
-        var booking = new Booking();
+        var booking = new BookingEntity();
 
         // Then
         Assert.AreEqual(EStatus.Created, booking.CurrentStatus);
@@ -31,7 +27,7 @@ public class BookingTest
     public void ShouldSetStatusToPaidWhenPayingForABookingWithCreatedStatus()
     {
         // Given
-        var booking = new Booking();
+        var booking = new BookingEntity();
 
         // When
         booking.ChangeState(EAction.Pay);
@@ -45,7 +41,7 @@ public class BookingTest
     public void ShouldSetStatusToCanceledWhenCancelingABookingWithCreatedStatus()
     {
         // Given
-        var booking = new Booking();
+        var booking = new BookingEntity();
 
         // When
         booking.ChangeState(EAction.Cancel);
@@ -58,7 +54,7 @@ public class BookingTest
     public void ShouldSetStatusToFinishedWhenFinishingAPaidBooking()
     {
         // Given
-        var booking = new Booking();
+        var booking = new BookingEntity();
 
         // When
         booking.ChangeState(EAction.Pay);
@@ -73,7 +69,7 @@ public class BookingTest
     public void ShouldSetStatusToRefoundedWhenRefoundingAPaidBooking()
     {
         // Given
-        var booking = new Booking();
+        var booking = new BookingEntity();
 
         // When
         booking.ChangeState(EAction.Pay);
@@ -87,7 +83,7 @@ public class BookingTest
     public void ShouldSetStatusToCreatedWhenReopeningACanceledBooking()
     {
         // Given
-        var booking = new Booking();
+        var booking = new BookingEntity();
 
         // When
         booking.ChangeState(EAction.Cancel);
@@ -101,7 +97,7 @@ public class BookingTest
     public void ShouldNotSetRefoundedWhenABookingWasNotPaid()
     {
         // Given
-        var booking = new Booking();
+        var booking = new BookingEntity();
 
         // When
         booking.ChangeState(EAction.Refound);
@@ -115,7 +111,7 @@ public class BookingTest
     public void ShouldNotSetRefoundedWhenABookingWasFinished()
     {
         // Given
-        var booking = new Booking();
+        var booking = new BookingEntity();
 
         // When
         booking.ChangeState(EAction.Pay);

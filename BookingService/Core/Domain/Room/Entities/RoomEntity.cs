@@ -1,4 +1,6 @@
-﻿using Domain.Guest.ValueObjects;
+﻿using Domain.Booking.Entities;
+using Domain.Guest.Enums;
+using Domain.Guest.ValueObjects;
 using Domain.Room.Exceptions;
 using Domain.Room.Ports.Out;
 
@@ -11,6 +13,7 @@ public class RoomEntity
     public int Level { get; set; }
     public bool InMaintenance { get; set; }
     public Price Price { get; set; }
+    public ICollection<BookingEntity> Bookings { get; set; }
     public bool IsAvailable
     {
         get
@@ -21,8 +24,18 @@ public class RoomEntity
     }
     public bool HasGuest
     {
-        //TODO: Verificar se existem Bookins abertos para esta Room
-        get { return true; }
+        get
+        {
+            var notAvailableStatuses = new List<EStatus>
+            {
+                EStatus.Created,
+                EStatus.Paid
+            };
+
+            return this.Bookings.Where(
+                b => b.Room.Id == this.Id &&
+                notAvailableStatuses.Contains(b.CurrentStatus)).Count() > 0;
+        }
     }
 
 
@@ -34,6 +47,26 @@ public class RoomEntity
             "Requireds fields not be empty"
             );
     }
+
+    public bool canBeBooked()
+    {
+        try
+        {
+            this.validateState();
+        }
+        catch (Exception)
+        {
+            return false;
+        }
+
+        if (!this.IsAvailable)
+        {
+            return false;
+        }
+
+        return true;
+    }
+
 
     public async Task save(IRoomRepository roomRepository)
     {

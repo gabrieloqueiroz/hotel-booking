@@ -21,8 +21,16 @@ public class RoomRepository : IRoomRepository
         return room.Id;
     }
 
-    public Task<RoomEntity> Get(int roomId)
+    public Task<RoomEntity> get(int roomId)
     {
-        return _hotelDbContext.Rooms.Where(x => x.Id.Equals(roomId)).FirstAsync();
+        return _hotelDbContext.Rooms
+            .Where(g => g.Id.Equals(roomId)).FirstAsync();
+    }
+
+    public Task<RoomEntity> getAggregate(int roomId)
+    {
+        return _hotelDbContext.Rooms
+            .Include(room => room.Bookings)
+            .Where(g => g.Id.Equals(roomId)).FirstAsync();
     }
 }

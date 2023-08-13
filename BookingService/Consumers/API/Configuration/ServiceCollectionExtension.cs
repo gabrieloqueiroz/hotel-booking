@@ -1,11 +1,15 @@
 ﻿using API.Logs;
+using Application.Booking;
+using Application.Booking.Ports.In;
 using Application.Guest;
 using Application.Guest.Ports.In;
 using Application.Room;
 using Application.Room.Ports.In;
 using Data;
+using Data.Booking;
 using Data.Guest;
 using Data.Room;
+using Domain.Booking.Ports.Out;
 using Domain.Guest.Ports.Out;
 using Domain.Room.Ports.Out;
 using Microsoft.EntityFrameworkCore;
@@ -29,12 +33,14 @@ public static class ServiceCollectionExtension
             options => options.UseSqlServer(connectionString));
 
         services.AddScoped<IGuestRepository, GuestRepository>();
-        services.AddScoped<IRoomRepository, RoomRepository>();
+        services.AddScoped<Domain.Room.Ports.Out.IRoomRepository, RoomRepository>();
+        services.AddScoped<IBookingRepository, BookingRepository>();
     }
 
     private static void RegisterPorts(IServiceCollection services)
     {
         services.AddScoped<IGuestManager, GuestManager>();
-        services.AddScoped<IRoomManager, RoomManager>();
+        services.AddScoped<Application.Room.Ports.In.IRoomManager, RoomManager>();
+        services.AddScoped<IBookingManager, BookingManager>();
     }
 }

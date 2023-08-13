@@ -63,7 +63,7 @@ public class GuestManager : IGuestManager
 
     public async Task<GuestResponse> get(int guestId)
     {
-        var guest = await _guestRepository.Get(guestId);
+        var guest = await _guestRepository.get(guestId);
 
         if (guest == null)
         {

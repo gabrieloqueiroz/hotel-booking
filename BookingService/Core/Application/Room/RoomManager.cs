@@ -3,15 +3,14 @@ using Application.Room.Ports.In;
 using Application.Room.Request;
 using Application.Room.Response;
 using Domain.Room.Exceptions;
-using Domain.Room.Ports.Out;
 
 namespace Application.Room;
 
 public class RoomManager : IRoomManager
 {
-    private IRoomRepository _roomRepository;
+    private Domain.Room.Ports.Out.IRoomRepository _roomRepository;
 
-    public RoomManager(IRoomRepository roomRepository)
+    public RoomManager(Domain.Room.Ports.Out.IRoomRepository roomRepository)
     {
         _roomRepository = roomRepository;
     }
@@ -34,8 +33,8 @@ public class RoomManager : IRoomManager
         }
         catch (MissingRequiredRoomInformation)
         {
-            return new RoomResponse 
-            { 
+            return new RoomResponse
+            {
                 Success = false,
                 ErrorCode = EErrorCodes.ROOM_MISSING_REQUIRED_INFO,
                 Message = "Missing required information passed"
@@ -43,7 +42,7 @@ public class RoomManager : IRoomManager
         }
     }
 
-    public Task<RoomResponse> Get(int id)
+    public Task<RoomResponse> get(int id)
     {
         throw new NotImplementedException();
     }
