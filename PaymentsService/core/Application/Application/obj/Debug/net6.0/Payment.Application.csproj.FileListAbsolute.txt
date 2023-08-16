@@ -1,0 +1,17 @@
+D:\estudos\.Net\HotelBooking\PaymentsService\core\Application\Application\obj\Debug\net6.0\Payment.Application.csproj.AssemblyReference.cache
+D:\estudos\.Net\HotelBooking\PaymentsService\core\Application\Application\obj\Debug\net6.0\Payment.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\estudos\.Net\HotelBooking\PaymentsService\core\Application\Application\obj\Debug\net6.0\Payment.Application.AssemblyInfoInputs.cache
+D:\estudos\.Net\HotelBooking\PaymentsService\core\Application\Application\obj\Debug\net6.0\Payment.Application.AssemblyInfo.cs
+D:\estudos\.Net\HotelBooking\PaymentsService\core\Application\Application\obj\Debug\net6.0\Payment.Application.csproj.CoreCompileInputs.cache
+D:\estudos\.Net\HotelBooking\PaymentsService\core\Application\Application\bin\Debug\net6.0\Payment.Application.deps.json
+D:\estudos\.Net\HotelBooking\PaymentsService\core\Application\Application\bin\Debug\net6.0\Payment.Application.dll
+D:\estudos\.Net\HotelBooking\PaymentsService\core\Application\Application\bin\Debug\net6.0\Payment.Application.pdb
+D:\estudos\.Net\HotelBooking\PaymentsService\core\Application\Application\bin\Debug\net6.0\Application.dll
+D:\estudos\.Net\HotelBooking\PaymentsService\core\Application\Application\bin\Debug\net6.0\Domain.dll
+D:\estudos\.Net\HotelBooking\PaymentsService\core\Application\Application\bin\Debug\net6.0\Application.pdb
+D:\estudos\.Net\HotelBooking\PaymentsService\core\Application\Application\bin\Debug\net6.0\Domain.pdb
+D:\estudos\.Net\HotelBooking\PaymentsService\core\Application\Application\obj\Debug\net6.0\Payment.Application.csproj.CopyComplete
+D:\estudos\.Net\HotelBooking\PaymentsService\core\Application\Application\obj\Debug\net6.0\Payment.Application.dll
+D:\estudos\.Net\HotelBooking\PaymentsService\core\Application\Application\obj\Debug\net6.0\refint\Payment.Application.dll
+D:\estudos\.Net\HotelBooking\PaymentsService\core\Application\Application\obj\Debug\net6.0\Payment.Application.pdb
+D:\estudos\.Net\HotelBooking\PaymentsService\core\Application\Application\obj\Debug\net6.0\ref\Payment.Application.dll

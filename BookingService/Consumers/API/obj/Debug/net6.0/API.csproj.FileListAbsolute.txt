@@ -103,3 +103,5 @@ D:\estudos\.Net\HotelBooking\BookingService\Consumers\API\bin\Debug\net6.0\Seril
 D:\estudos\.Net\HotelBooking\BookingService\Consumers\API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Annotations.dll
 D:\estudos\.Net\HotelBooking\BookingService\Consumers\API\bin\Debug\net6.0\Application.dll
 D:\estudos\.Net\HotelBooking\BookingService\Consumers\API\bin\Debug\net6.0\Application.pdb
+D:\estudos\.Net\HotelBooking\BookingService\Consumers\API\bin\Debug\net6.0\Payment.Application.dll
+D:\estudos\.Net\HotelBooking\BookingService\Consumers\API\bin\Debug\net6.0\Payment.Application.pdb

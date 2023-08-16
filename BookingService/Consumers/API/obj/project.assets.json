@@ -1541,6 +1541,19 @@
         "runtime": {
           "bin/placeholder/Domain.dll": {}
         }
+      },
+      "Payment.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Payment.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Payment.Application.dll": {}
+        }
       }
     }
   },
@@ -4307,6 +4320,11 @@
       "type": "project",
       "path": "../../Core/Domain/Domain.csproj",
       "msbuildProject": "../../Core/Domain/Domain.csproj"
+    },
+    "Payment.Application/1.0.0": {
+      "type": "project",
+      "path": "../../../PaymentsService/core/Application/Application/Payment.Application.csproj",
+      "msbuildProject": "../../../PaymentsService/core/Application/Application/Payment.Application.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4315,6 +4333,7 @@
       "Data >= 1.0.0",
       "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.8",
+      "Payment.Application >= 1.0.0",
       "Serilog.AspNetCore >= 6.1.0",
       "Serilog.Settings.Configuration >= 3.4.0",
       "Swashbuckle.AspNetCore >= 6.2.3",
@@ -4353,6 +4372,9 @@
             },
             "D:\\estudos\\.Net\\HotelBooking\\BookingService\\Core\\Application\\Application.csproj": {
               "projectPath": "D:\\estudos\\.Net\\HotelBooking\\BookingService\\Core\\Application\\Application.csproj"
+            },
+            "D:\\estudos\\.Net\\HotelBooking\\PaymentsService\\core\\Application\\Application\\Payment.Application.csproj": {
+              "projectPath": "D:\\estudos\\.Net\\HotelBooking\\PaymentsService\\core\\Application\\Application\\Payment.Application.csproj"
             }
           }
         }

@@ -12,6 +12,7 @@
           "Data": "1.0.0",
           "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": "5.0.0",
           "Microsoft.EntityFrameworkCore.Design": "7.0.8",
+          "Payment.Application": "1.0.0",
           "Serilog.AspNetCore": "6.1.0",
           "Serilog.Settings.Configuration": "3.4.0",
           "Swashbuckle.AspNetCore": "6.2.3",
@@ -931,6 +932,14 @@
         "runtime": {
           "Domain.dll": {}
         }
+      },
+      "Payment.Application/1.0.0": {
+        "dependencies": {
+          "Application": "1.0.0"
+        },
+        "runtime": {
+          "Payment.Application.dll": {}
+        }
       }
     }
   },
@@ -1574,6 +1583,11 @@
       "sha512": ""
     },
     "Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Payment.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
