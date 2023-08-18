@@ -15,6 +15,7 @@ using Domain.Booking.Ports.Out;
 using Domain.Guest.Ports.Out;
 using Domain.Room.Ports.Out;
 using Microsoft.EntityFrameworkCore;
+using Payment.Application;
 
 namespace API.Configuration;
 
@@ -44,6 +45,7 @@ public static class ServiceCollectionExtension
         services.AddScoped<IGuestManager, GuestManager>();
         services.AddScoped<IRoomManager, RoomManager>();
         services.AddScoped<IBookingManager, BookingManager>();
-        services.AddScoped<IMercadoPagoPaymentService, MercadoPagoAdapter>();
+        services.AddScoped<IPaymentProcessorFactory, PaymentProcessorFactory>();
+        services.AddScoped<IPaymentProcessorFactory, PaymentProcessorFactory>();
     }
 }

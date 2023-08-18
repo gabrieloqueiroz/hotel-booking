@@ -1,55 +1,50 @@
 ﻿using Application.MercadoPago.Exceptions;
 using Application.Payment.Dtos;
+using Application.Payment.Enum;
 using Application.Payment.Ports.In;
 using Application.Payment.Response;
 
 namespace Application.MercadoPago;
 
-public class MercadoPagoAdapter : IMercadoPagoPaymentService
+public class MercadoPagoAdapter : IPaymentProcessor
 {
-    public Task<PaymentResponse> PayTransferAccount(string transferIntention)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<PaymentResponse> PayWithCreditCard(string paymentIntention)
+    public Task<PaymentResponse> CapturePayment(string paymentIntention)
     {
         try
         {
-            if (string.IsNullOrEmpty(paymentIntention)) throw new InvalidPaymentException("Invalid payment intention");
+            if (string.IsNullOrWhiteSpace(paymentIntention))
+            {
+                throw new InvalidPaymentIntentionException();
+            }
 
             paymentIntention += "/success";
 
-            var paymentResult = new PaymentStateDto
+            var dto = new PaymentStateDto
             {
                 CreatedDate = DateTime.Now,
-                Message = $"Successfully paid - {paymentIntention}",
+                Message = $"Successfully paid {paymentIntention}",
                 PaymentId = "123",
-                Status = Payment.Enum.Status.Success
+                Status = Status.Success
             };
 
             var response = new PaymentResponse
             {
+                data = dto,
                 Success = true,
-                data = paymentResult
+                Message = "Payment successfully processed"
             };
 
             return Task.FromResult(response);
         }
-        catch (Exception)
+        catch (InvalidPaymentIntentionException)
         {
-            var result = new PaymentResponse
+            var resp = new PaymentResponse()
             {
                 Success = false,
-                ErrorCode = EErrorCodes.INVALID_PAYMENT_INTENTION
+                ErrorCode = EErrorCodes.PAYMENT_INVALID_PAYMENT_INTENTION,
+                Message = "The selected payment intention is invalid"
             };
-
-            return Task.FromResult(result);
+            return Task.FromResult(resp);
         }
-    }
-
-    public Task<PaymentResponse> PayWithDebitCard(string paymentIntention)
-    {
-        throw new NotImplementedException();
     }
 }

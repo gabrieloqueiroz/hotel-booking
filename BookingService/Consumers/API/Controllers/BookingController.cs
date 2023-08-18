@@ -2,6 +2,7 @@
 using Application.Booking.DTOs;
 using Application.Booking.Ports.In;
 using Application.Booking.Request;
+using Application.Booking.Response;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
@@ -36,5 +37,16 @@ public class BookingController : ControllerBase
         _logger.RecLog(nameof(Create), $"Response with unknown ErrorCode retuned - {bookingCreated}", ELogType.LogInformation);
 
         return BadRequest(500);
+    }
+
+    [HttpPost("{bookingId}/payment")]
+    public async Task<ActionResult<BookingResponse>> Payment(PaymentRequestDto paymentRequestDto, int bookingId)
+    {
+        paymentRequestDto.BookingId = bookingId;
+        var res = await _bookingManager.PaymentForABooking(paymentRequestDto);
+
+        if (res.Success) return Ok(res.data);
+
+        return BadRequest(res);
     }
 }

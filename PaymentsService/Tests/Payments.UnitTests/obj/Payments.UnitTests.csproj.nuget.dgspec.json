@@ -1,0 +1,261 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\estudos\\.Net\\HotelBooking\\PaymentsService\\Tests\\Payments.UnitTests\\Payments.UnitTests.csproj": {}
+  },
+  "projects": {
+    "D:\\estudos\\.Net\\HotelBooking\\BookingService\\Core\\Application\\Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\estudos\\.Net\\HotelBooking\\BookingService\\Core\\Application\\Application.csproj",
+        "projectName": "Application",
+        "projectPath": "D:\\estudos\\.Net\\HotelBooking\\BookingService\\Core\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\",
+        "outputPath": "D:\\estudos\\.Net\\HotelBooking\\BookingService\\Core\\Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\gabriel.queiroz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\estudos\\.Net\\HotelBooking\\BookingService\\Core\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\estudos\\.Net\\HotelBooking\\BookingService\\Core\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\estudos\\.Net\\HotelBooking\\BookingService\\Core\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\estudos\\.Net\\HotelBooking\\BookingService\\Core\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "D:\\estudos\\.Net\\HotelBooking\\BookingService\\Core\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\",
+        "outputPath": "D:\\estudos\\.Net\\HotelBooking\\BookingService\\Core\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\gabriel.queiroz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\estudos\\.Net\\HotelBooking\\PaymentsService\\core\\Application\\Application\\Payment.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\estudos\\.Net\\HotelBooking\\PaymentsService\\core\\Application\\Application\\Payment.Application.csproj",
+        "projectName": "Payment.Application",
+        "projectPath": "D:\\estudos\\.Net\\HotelBooking\\PaymentsService\\core\\Application\\Application\\Payment.Application.csproj",
+        "packagesPath": "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\",
+        "outputPath": "D:\\estudos\\.Net\\HotelBooking\\PaymentsService\\core\\Application\\Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\gabriel.queiroz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\estudos\\.Net\\HotelBooking\\BookingService\\Core\\Application\\Application.csproj": {
+                "projectPath": "D:\\estudos\\.Net\\HotelBooking\\BookingService\\Core\\Application\\Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\estudos\\.Net\\HotelBooking\\PaymentsService\\Tests\\Payments.UnitTests\\Payments.UnitTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\estudos\\.Net\\HotelBooking\\PaymentsService\\Tests\\Payments.UnitTests\\Payments.UnitTests.csproj",
+        "projectName": "Payments.UnitTests",
+        "projectPath": "D:\\estudos\\.Net\\HotelBooking\\PaymentsService\\Tests\\Payments.UnitTests\\Payments.UnitTests.csproj",
+        "packagesPath": "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\",
+        "outputPath": "D:\\estudos\\.Net\\HotelBooking\\PaymentsService\\Tests\\Payments.UnitTests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\gabriel.queiroz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\estudos\\.Net\\HotelBooking\\BookingService\\Core\\Application\\Application.csproj": {
+                "projectPath": "D:\\estudos\\.Net\\HotelBooking\\BookingService\\Core\\Application\\Application.csproj"
+              },
+              "D:\\estudos\\.Net\\HotelBooking\\PaymentsService\\core\\Application\\Application\\Payment.Application.csproj": {
+                "projectPath": "D:\\estudos\\.Net\\HotelBooking\\PaymentsService\\core\\Application\\Application\\Payment.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.11.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.2, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

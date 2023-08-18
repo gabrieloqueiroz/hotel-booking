@@ -1,11 +1,14 @@
 using API.Configuration;
+using System.Text.Json.Serialization;
 
 string baseUrl = "hotel-booking";
 string serviceName = "HotelBooking";
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 builder.Services.RegisterDependencies(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerConfiguration();
