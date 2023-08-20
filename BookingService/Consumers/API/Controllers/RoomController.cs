@@ -30,7 +30,12 @@ public class RoomController : ControllerBase
     {
         var roomCreated = await _mediator.Send(new CreateRoomCommand { RoomRequest = new RoomRequest { RoomDto  = room} });
 
-        //var roomCreated = await _roomManager.Create(request);
+
+        /*
+         * Chamada sem usar o mediator (CQRS)
+         * var roomCreated = await _roomManager.Create(request);
+         */
+
 
         if (roomCreated.Success) return Created(" ", roomCreated.Data);
 
@@ -45,6 +50,12 @@ public class RoomController : ControllerBase
     public async Task<ActionResult<RoomDto>> Get(int id)
     {
         var roomResponse = await _mediator.Send(new GetRoomQuery{Id = id});
+
+
+        /*
+         * Chamada sem usar o mediator (CQRS)
+         * var roomResponse = await _roomManager.get(id);
+         */
 
         if (!roomResponse.Success) return NotFound(roomResponse);
 
