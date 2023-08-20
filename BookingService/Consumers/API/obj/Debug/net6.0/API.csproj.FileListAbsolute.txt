@@ -105,3 +105,6 @@ D:\estudos\.Net\HotelBooking\BookingService\Consumers\API\bin\Debug\net6.0\Appli
 D:\estudos\.Net\HotelBooking\BookingService\Consumers\API\bin\Debug\net6.0\Application.pdb
 D:\estudos\.Net\HotelBooking\BookingService\Consumers\API\bin\Debug\net6.0\Payment.Application.dll
 D:\estudos\.Net\HotelBooking\BookingService\Consumers\API\bin\Debug\net6.0\Payment.Application.pdb
+D:\estudos\.Net\HotelBooking\BookingService\Consumers\API\bin\Debug\net6.0\MediatR.dll
+D:\estudos\.Net\HotelBooking\BookingService\Consumers\API\bin\Debug\net6.0\MediatR.Contracts.dll
+D:\estudos\.Net\HotelBooking\BookingService\Consumers\API\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll

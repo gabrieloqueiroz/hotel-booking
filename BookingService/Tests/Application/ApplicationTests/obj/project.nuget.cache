@@ -1,13 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "vjt3NCEPQIouwFIUw6YBiKj4OWVHCVTHw8eCVJ6jB4D8FAsGG40ZjVuYQSEwS1YNgXL5sFeK+uobBtGWenhFig==",
+  "dgSpecHash": "p+7rHEKBiV2WgMa1zTY9eGoHULLyn8lgNFoo0yIIOahXVfV+aeoT9up84HOrGj2RcUs5UaUJ3I1WktNjP/ltjw==",
   "success": true,
   "projectFilePath": "D:\\estudos\\.Net\\HotelBooking\\BookingService\\Tests\\Application\\ApplicationTests\\ApplicationTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
+    "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
+    "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
     "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\microsoft.codecoverage\\17.3.2\\microsoft.codecoverage.17.3.2.nupkg.sha512",
     "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
+    "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\microsoft.net.test.sdk\\17.3.2\\microsoft.net.test.sdk.17.3.2.nupkg.sha512",
     "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
@@ -55,5 +59,16 @@
     "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\system.xml.readerwriter\\4.0.11\\system.xml.readerwriter.4.0.11.nupkg.sha512",
     "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: MediatR.Extensions.Microsoft.DependencyInjection 11.1.0 requires MediatR (>= 11.0.0 && < 12.0.0) but version MediatR 12.1.1 was resolved.",
+      "libraryId": "MediatR",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

@@ -1,8 +1,24 @@
 {
   "version": 2,
-  "dgSpecHash": "QPU8NXtz+0eROiJEuMWd7r5ibfkzKFcsP4f5+4YXmBB2iLF2LXThUtsrq3amTz9NID8whE4ctig1rdyWSY/UXg==",
+  "dgSpecHash": "w0wkGG2cm+sW8neEhoO0KP9y6ASmpoYaOKsdle8fG8JbiPjKCQsUt7KyhonrCw8i1W/v6MS+DyXCENscCQIVOA==",
   "success": true,
   "projectFilePath": "D:\\estudos\\.Net\\HotelBooking\\PaymentsService\\core\\Application\\Application\\Payment.Application.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
+    "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
+    "C:\\Users\\gabriel.queiroz\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: MediatR.Extensions.Microsoft.DependencyInjection 11.1.0 requires MediatR (>= 11.0.0 && < 12.0.0) but version MediatR 12.1.1 was resolved.",
+      "libraryId": "MediatR",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

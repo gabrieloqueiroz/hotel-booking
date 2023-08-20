@@ -3,8 +3,6 @@ using Application.Booking;
 using Application.Booking.Ports.In;
 using Application.Guest;
 using Application.Guest.Ports.In;
-using Application.MercadoPago;
-using Application.Payment.Ports.In;
 using Application.Room;
 using Application.Room.Ports.In;
 using Data;
@@ -14,6 +12,7 @@ using Data.Room;
 using Domain.Booking.Ports.Out;
 using Domain.Guest.Ports.Out;
 using Domain.Room.Ports.Out;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Payment.Application;
 
@@ -25,6 +24,11 @@ public static class ServiceCollectionExtension
     public static void RegisterDependencies(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddScoped<LogModel>();
+        //services.AddMediatR(typeof(BookingManager));
+        services.AddMediatR(cfg => {
+            cfg.RegisterServicesFromAssembly(typeof(BookingManager).Assembly);
+        });
+
         RegisterRepositories(services, configuration);
         RegisterPorts(services);
     }

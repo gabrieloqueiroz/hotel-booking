@@ -1,4 +1,5 @@
 using API.Configuration;
+using Application.Booking;
 using System.Text.Json.Serialization;
 
 string baseUrl = "hotel-booking";
