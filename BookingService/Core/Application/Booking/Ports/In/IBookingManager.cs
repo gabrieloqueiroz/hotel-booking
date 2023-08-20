@@ -8,6 +8,6 @@ namespace Application.Booking.Ports.In;
 public interface IBookingManager
 {
     Task<BookingResponse> createBooking(BookingRequest bookingRequest);
-    Task<BookingResponse> getBooking(int id);
+    Task<BookingResponse> GetBooking(int id);
     Task<PaymentResponse> PaymentForABooking(PaymentRequestDto paymentRequestDto);
 }

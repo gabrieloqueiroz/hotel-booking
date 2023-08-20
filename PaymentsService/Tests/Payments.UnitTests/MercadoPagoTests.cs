@@ -28,7 +28,7 @@ public class MercadoPagoTests
         var factory = new PaymentProcessorFactory();
 
         // When
-        var provider = factory.GetPaymentProcessor(SupportedPaymentProviders.MercadoPago)
+        var provider = factory.GetPaymentProcessor(SupportedPaymentProviders.MercadoPago);
         var res = await provider.CapturePayment("");
 
         // Then

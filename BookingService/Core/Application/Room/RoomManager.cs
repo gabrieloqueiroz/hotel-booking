@@ -17,6 +17,12 @@ public class RoomManager : IRoomManager
 
     public async Task<RoomResponse> Create(RoomRequest requestDto)
     {
+
+        /*
+         * Esse método (Create) é o mesmo contigo na classe CreateRoomCommandHandler.
+         * A intenção foi criar métodos de implementar o hexagonal utilizando o CQRS
+         * E tambem com a não utilização do mesmo
+         */
         try
         {
             var entity = RoomDto.MapToEntity(requestDto.RoomDto);
@@ -42,8 +48,37 @@ public class RoomManager : IRoomManager
         }
     }
 
-    public Task<RoomResponse> get(int id)
+    public async Task<RoomResponse> get(int id)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var room = await _roomRepository.get(id);
+
+            if (room == null)
+            {
+                return new RoomResponse
+                {
+                    Success = false,
+                    ErrorCode = EErrorCodes.ROOM_NOT_FOUND,
+                    Message = "Room not found"
+                };
+            }
+
+            var roomDto = RoomDto.MapToDto(room);
+
+            return new RoomResponse
+            {
+                Data = roomDto,
+            };
+        }
+        catch (Exception)
+        {
+            return new RoomResponse
+            {
+                Success = false,
+                ErrorCode = EErrorCodes.ROOM_NOT_FOUND,
+                Message = "Error to found room"
+            };
+        }
     }
 }

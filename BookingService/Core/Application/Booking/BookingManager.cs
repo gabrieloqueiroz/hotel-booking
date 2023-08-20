@@ -32,6 +32,12 @@ public class BookingManager : IBookingManager
 
     public async Task<BookingResponse> createBooking(BookingRequest bookingRequest)
     {
+        /*
+         * Esse método (createBooking) é o mesmo contigo na classe CreateBookingCommandHandler.
+         * A intenção foi criar métodos de implementar o hexagonal utilizando o CQRS
+         * E tambem com a não utilização do mesmo
+         */
+
         try
         {
 
@@ -72,6 +78,11 @@ public class BookingManager : IBookingManager
 
     public async Task<PaymentResponse> PaymentForABooking(PaymentRequestDto paymentRequestDto)
     {
+        /*
+        * Esse método (PaymentForABooking) é o mesmo contigo na classe PaymentForABookingCommandHandler.
+        * A intenção foi criar métodos de implementar o hexagonal utilizando o CQRS
+        * E tambem com a não utilização do mesmo
+        */
         var paymentProcessor = _paymentProcessorFactory.GetPaymentProcessor(paymentRequestDto.SelectedPaymentProvider);
 
         var capturedPayment = await paymentProcessor.CapturePayment(paymentRequestDto.PaymentIntention);
@@ -89,9 +100,15 @@ public class BookingManager : IBookingManager
         return capturedPayment;
     }
 
-    public async Task<BookingResponse> getBooking(int id)
+    public async Task<BookingResponse> GetBooking(int id)
     {
-        try {
+        /*
+         * Esse método (getBooking) é o mesmo contigo na classe GetBookingQueryHandler.
+         * A intenção foi criar métodos de implementar o hexagonal utilizando o CQRS
+         * E tambem com a não utilização do mesmo
+         */
+        try
+        {
             var booking = await _bookingRepository.GetBooking(id);
 
             if (booking == null)

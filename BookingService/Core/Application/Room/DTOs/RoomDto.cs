@@ -27,4 +27,17 @@ public class RoomDto
             }
         };
     }
+
+    public static RoomDto MapToDto(RoomEntity entity)
+    {
+        return new RoomDto
+        {
+            Id = entity.Id,
+            Name = entity.Name,
+            Level = entity.Level,
+            InMaintenance = entity.InMaintenance,
+            Currency = entity.Price.Currency,
+            Price = entity.Price.Value
+        };
+    }
 }

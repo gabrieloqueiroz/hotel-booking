@@ -1,6 +1,6 @@
 ﻿using API.Logs;
 using Application.Booking.CQRS.Commands;
-using Application.Booking.CQRS.Query;
+using Application.Booking.CQRS.Queries;
 using Application.Booking.DTOs;
 using Application.Booking.Ports.In;
 using Application.Booking.Request;

@@ -24,9 +24,9 @@ public static class ServiceCollectionExtension
     public static void RegisterDependencies(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddScoped<LogModel>();
-        //services.AddMediatR(typeof(BookingManager));
         services.AddMediatR(cfg => {
             cfg.RegisterServicesFromAssembly(typeof(BookingManager).Assembly);
+            cfg.RegisterServicesFromAssembly(typeof(RoomManager).Assembly);
         });
 
         RegisterRepositories(services, configuration);
