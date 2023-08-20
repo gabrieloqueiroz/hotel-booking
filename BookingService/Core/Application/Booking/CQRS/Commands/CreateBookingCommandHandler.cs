@@ -2,7 +2,7 @@
 using Application.Booking.Response;
 using MediatR;
 
-namespace Application.Booking.Commands;
+namespace Application.Booking.CQRS.Commands;
 
 public class CreateBookingCommandHandler : IRequestHandler<CreateBookingCommand, BookingResponse>
 {

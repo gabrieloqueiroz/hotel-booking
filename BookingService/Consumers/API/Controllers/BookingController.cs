@@ -1,5 +1,6 @@
 ﻿using API.Logs;
-using Application.Booking.Commands;
+using Application.Booking.CQRS.Commands;
+using Application.Booking.CQRS.Query;
 using Application.Booking.DTOs;
 using Application.Booking.Ports.In;
 using Application.Booking.Request;
@@ -32,7 +33,7 @@ public class BookingController : ControllerBase
             data = bookingDto
         };
 
-        var bookingCreated = await _mediator.Send (new CreateBookingCommand { BookingRequest = bookingRequest });
+        var bookingCreated = await _mediator.Send(new CreateBookingCommand { BookingRequest = bookingRequest });
 
         if (bookingCreated.Success) return Created(" ", bookingCreated.data);
 
@@ -52,5 +53,15 @@ public class BookingController : ControllerBase
         if (res.Success) return Ok(res.data);
 
         return BadRequest(res);
+    }
+
+    [HttpGet]
+    public async Task<ActionResult<BookingResponse>> Get(int id)
+    {
+        var bookingResponse = await _mediator.Send(new GetBookingQuery { Id = id });
+
+        if (!bookingResponse.Success) return NotFound(bookingResponse);
+
+        return Ok(bookingResponse.data);
     }
 }

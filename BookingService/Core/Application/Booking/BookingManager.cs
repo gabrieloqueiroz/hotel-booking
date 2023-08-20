@@ -89,8 +89,35 @@ public class BookingManager : IBookingManager
         return capturedPayment;
     }
 
-    public Task<BookingResponse> getBooking(int id)
+    public async Task<BookingResponse> getBooking(int id)
     {
-        throw new NotImplementedException();
+        try {
+            var booking = await _bookingRepository.GetBooking(id);
+
+            if (booking == null)
+            {
+                return new BookingResponse
+                {
+                    Success = false,
+                    ErrorCode = EErrorCodes.ROOM_NOT_FOUND,
+                    Message = "Room not found"
+                };
+            }
+
+            return new BookingResponse
+            {
+                data = BookingDto.MapToDto(booking),
+                Success = true
+            };
+        }
+        catch(Exception)
+        {
+            return new BookingResponse
+            {
+                Success = false,
+                ErrorCode = EErrorCodes.ROOM_NOT_FOUND,
+                Message = "Room not found"
+            };
+        }
     }
 }

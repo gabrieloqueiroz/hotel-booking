@@ -27,6 +27,9 @@ public class BookingRepository : IBookingRepository
 
     public Task<BookingEntity> GetBooking(int id)
     {
-        return _hotelDBContext.Bookings.Where(x => x.Id.Equals(id)).FirstAsync();
+        return _hotelDBContext.Bookings
+            .Include(g => g.Guest)
+            .Include(r => r.Room)
+            .Where(x => x.Id.Equals(id)).FirstAsync();
     }
 }

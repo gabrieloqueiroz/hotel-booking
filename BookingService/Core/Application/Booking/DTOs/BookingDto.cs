@@ -33,4 +33,18 @@ public class BookingDto
             PlacedAt = bookingDto.PlacedAt,
         };
     }
+
+    public static BookingDto MapToDto(BookingEntity booking)
+    {
+        return new BookingDto
+        {
+            Id = booking.Id,
+            Start = booking.Start,
+            End = booking.End,
+            GuestId = booking.Guest.Id,
+            RoomId = booking.Room.Id,
+            PlacedAt = booking.PlacedAt,
+            Status = booking.CurrentStatus
+        };
+    }
 }
